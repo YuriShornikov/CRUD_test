@@ -1,0 +1,29 @@
+GET http://localhost:8000/comments/?limit=2&offset=0
+
+###
+
+POST http://localhost:8000/comments/
+Content-Type: application/json
+
+{
+    "user": 1,
+    "text": "text from rest client"
+}
+
+###
+
+GET http://localhost:8000/comments/2/
+
+
+###
+
+PATCH http://localhost:8000/comments/1/
+Content-Type: application/json
+
+{
+    "text": "new text"
+}
+
+###
+
+DELETE http://localhost:8000/comments/3/
